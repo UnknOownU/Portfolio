@@ -15,6 +15,7 @@ import PortfolioPreview from '../components/PortfolioPreview.astro';
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
 import Skills from '../components/Skills.astro';
+import EducationTimeline from '../components/EducationTimeline.astro';
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection('work'))
@@ -53,8 +54,8 @@ const projects = (await getCollection('work'))
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
+					<h3>Projets Sélectionnés</h3>
+					<p>Je vous présente avec fierté les projets qui me tiennent le plus à cœur.</p>
 				</header>
 
 				<div class="gallery">
@@ -71,32 +72,24 @@ const projects = (await getCollection('work'))
 
 				<div class="cta">
 					<CallToAction href="/work/">
-						View All
+						Tout voir
 						<Icon icon="arrow-right" size="1.2em" />
 					</CallToAction>
 				</div>
 			</section>
 
 			<section class="section with-background bg-variant">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
+				<header class="section-header stack gap-4 lg:gap-10">
+					<h3>Mon Parcour</h3>
 					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
+						Sorti fraîchement de l'école à l'âge de 19 ans, 
+						j'ai décidé, porté par ma détermination, de faire un grand pas en 
+						avant en entamant une formation complète de développement Full Stack.
 					</p>
 				</header>
 
-				<div class="gallery">
-					<Grid variant="small">
-						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
-					</Grid>
-				</div>
+</div>
+				<EducationTimeline />
 			</section>
 		</main>
 
@@ -247,4 +240,5 @@ const projects = (await getCollection('work'))
 			height: 9.5rem;
 		}
 	}
+
 </style>

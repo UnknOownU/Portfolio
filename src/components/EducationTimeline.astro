@@ -1,0 +1,88 @@
+---
+// Supposons que vous avez votre contenu éducatif ici, ou vous pourriez le charger à partir d'un fichier externe.
+const educationTimeline = [
+  { 
+    institution: "Collège SAINT GABRIEL, Tourcoing", 
+    diploma: "Brevet obtenu Avec Mention" 
+  },
+  { 
+    institution: "Lycée Colbert, Tourcoing", 
+    diploma: "Bac général et technologique obtenu sans Mention" 
+  },
+  { 
+    institution: "AFPA, Formation Développeur full stack, Roubaix", 
+    period: "10/2022 - 06/2023", 
+    details: "License Développeur full stack. En recherche de stage pour la période du 06/05/2024 au 06/06/2024" 
+  }
+];
+---
+
+<div class="education-timeline">
+  {educationTimeline.map((education) => (
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <h4>{education.institution}</h4>
+        <p>{education.diploma}</p>
+        {education.period && <time>{education.period}</time>}
+        {education.details && <p>{education.details}</p>}
+      </div>
+    </div>
+  ))}
+</div>
+
+<style>
+/* Style pour la chronologie éducative en utilisant les variables de votre thème */
+.education-timeline {
+  position: relative;
+  margin-left: 20px;
+  border-left: 2px solid var(--gray-800); /* Utilisez la couleur grise de votre thème pour la bordure */
+}
+
+.timeline-item {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -13px; /* Ajustez si nécessaire */
+  top: 10px;
+  height: 25px;
+  width: 2px;
+  background-color: var(--button-gradient); /* Utilisez le dégradé de votre bouton ici */
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm); /* Ombre de votre thème */
+}
+
+.timeline-content {
+  margin-left: 20px;
+  background-color: var(--gray-999_40); /* Couleur de fond semi-transparente de votre thème */
+  border-radius: 1.5rem;
+  padding: 15px;
+  box-shadow: var(--shadow-md); /* Ombre moyenne de votre thème */
+}
+
+.timeline-content h4, .timeline-content p {
+  color: var(--gray-300); /* Couleur de texte grise de votre thème */
+}
+
+@media (min-width: 50em) {
+  .education-timeline {
+    margin-left: 40px;
+  }
+
+  .timeline-marker {
+    left: -18px;
+    height: 30px;
+    width: 30px;
+  }
+
+  .timeline-content {
+    margin-left: 20px;
+  }
+}
+
+
+
+</style>
