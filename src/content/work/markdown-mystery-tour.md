@@ -3,8 +3,7 @@ title: SwearJar
 publishDate: 2023-12-29
 img: /assets/stock-1.jpg
 img_alt: Iridescent ripples of a bright blue and pink liquid
-description: |
-  Mon premier grand projet
+description: Mon premier grand projet
 tags:
   - Css
   - PHP
