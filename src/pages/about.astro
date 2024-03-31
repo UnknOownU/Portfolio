@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
+
+const cvPdfUrl = 'https://firebasestorage.googleapis.com/v0/b/portfolio-abdelkarimboucharafa.appspot.com/o/dEV_fULL_sTACK.pdf?alt=media&token=e5346f0f-13d2-4000-8739-ab29a40fefe6';
 ---
 
 <BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
@@ -19,7 +20,15 @@ import Hero from '../components/Hero.astro';
 					alt="Jeanine White at work with a colleague"
 				/>
 			</Hero>
-
+			<section>
+				<h2 class="section-title">CV</h2>
+				<div class="content">
+				  <p>
+					Vous pouvez télécharger mon CV en format PDF.
+				  </p>
+				  <a href={cvPdfUrl} download="dEV_fULL_sTACK.pdf">Télécharger mon CV</a>
+				</div>
+			  </section>
 			<section>
 				<h2 class="section-title">Background</h2>
 				<div class="content">
