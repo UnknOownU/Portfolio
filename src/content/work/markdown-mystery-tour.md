@@ -1,35 +1,34 @@
 ---
-title: SwearJar
+title: SwearJar 
 publishDate: 2023-12-29
 img: /assets/stock-1.jpg
 img_alt: Iridescent ripples of a bright blue and pink liquid
 description: |
-  We designed a whodunnit-style game to introduce Markdown formatting. Suspense — suspicion — syntax!
+Mon premier grand projet
 tags:
-  - Design
-  - Dev
-  - User Testing
+  - Css
+  - PHP
+  - Html
+  - FullStack
+  - Architecture MVC
 ---
 
-## Level-two heading
+## Parcours de Développement
 
-> Tell me and I forget. Teach me and I remember. Involve me and I learn.
+Du concept à la réalisation, SwearJar illustre la puissance de l'apprentissage collaboratif Nous avons exploité le potentiel du PHP pour la logique côté serveur, et combiné HTML et CSS pour créer une interface utilisateur intuitive, en y intégrant JavaScript pour une interaction renforcée. L'architecture de l'application a été méticuleusement élaborée, englobant des fonctionnalités variées telles que la gestion de comptes, le suivi des infractions et les transactions financières.
 
-Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
+Notre interface utilisateur est conçue pour faciliter le suivi et la gestion de l'usage de langage inapproprié. La fonction "pénalité" agit comme une dissuasion, tout en rappelant ludiquement l'impact des mots. La simplicité, un élément clé de l'expérience utilisateur, est devenue le fondement de notre design.
 
-Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel quam elementum pulvinar etiam non.
+### Détails Techniques
 
-### Level-three heading
+À chaque commit et push, nous avons plongé plus profondément dans le monde du développement web. De la mise en place d'un système de connexion sécurisé à la création de notifications en temps réel pour les incidents de jurons, chaque ligne de code était une leçon en soi. Les défis étaient nombreux, allant de la conception de schémas de base de données à l'implémentation d'une architecture MVC (Modèle-Vue-Contrôleur) robuste.
+### Conception Centrée Utilisateur et Ludification
 
-Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra. Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl pretium fusce.
+SwearJar ne se limite pas à pénaliser ; il s'agit d'apprendre et de grandir. En intégrant des éléments de jeu, nous avons transformé une simple application web en une plateforme qui encourage un comportement positif grâce à un système de récompense. Les amendes collectées pourraient contribuer à un événement de groupe ou à une œuvre caritative, transformant une action négative en une action positive.
+#### Coulisses
 
-### Level-three heading
-
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
-
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
-
-#### Level-four heading
-
-- We noted this
-- And also this other point
+- Nous avons abordé le développement back-end PHP avec finesse.
+- JavaScript a donné vie à notre front-end avec un contenu dynamique.
+- MySQL a veillé à ce que chaque contribution au "Swear Jar" soit comptabilisée.
+- Les tests utilisateurs ont été cruciaux, nous permettant d'affiner la plateforme de manière itérative.
+- Nous avons abordé le développement back-end PHP avec finesse.
