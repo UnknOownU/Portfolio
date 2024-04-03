@@ -14,7 +14,6 @@ import PortfolioPreview from '../components/PortfolioPreview.astro';
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
-import Skills from '../components/Skills.astro';
 import EducationTimeline from '../components/EducationTimeline.astro';
 
 // Content Fetching: List four most recent work projects
@@ -27,6 +26,8 @@ const projects = (await getCollection('work'))
 ---
 
 <BaseLayout>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 	<div class="stack gap-20 lg:gap-48">
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
@@ -35,13 +36,35 @@ const projects = (await getCollection('work'))
 					tagline="Développeur Full Stack"
 					align="start"
 				>
-					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> développeur full stack</Pill>
-					</div>
+				<div class="roles">
+					<!-- Création de site -->
+					<Pill><i class="fab fa-html5"></i> HTML</Pill>
+					<Pill><i class="fab fa-css3-alt"></i> CSS</Pill>
+					<Pill><i class="fab fa-js-square"></i> JavaScript</Pill>
+					<Pill><i class="fab fa-bootstrap"></i> Bootstrap</Pill>
+				
+					<!-- Création de fonctionnalités -->
+					<Pill><i class="fab fa-php"></i> PHP</Pill>
+					<Pill><i class="fab fa-symfony"></i> Symfony</Pill> <!-- Utilisez une icône personnalisée ou une image si FontAwesome n'a pas d'icône Symfony -->
+					<Pill><i class="fab fa-node-js"></i> Node.js</Pill>
+					<!-- Implémentation, création et test d'API -->
+					<Pill><i class="fas fa-cloud"></i> <i class="fas fa-cog"></i> API REST</Pill> <!-- Cette icône n'existe pas dans FontAwesome, vous pourriez avoir besoin d'utiliser une icône générique pour REST, par exemple 'fas fa-cogs' -->
+					<Pill><i class="fab fa-git-alt"></i> Git</Pill>
+					<Pill><i class="fab fa-github"></i> GitHub</Pill> <!-- Utilisez 'fab fa-gitkraken' si vous voulez représenter GitKraken -->
+				
+					<!-- Containers et Orchestration -->
+					<Pill><i class="fab fa-docker"></i> Docker</Pill>
+				
+					<!-- Base de données -->
+					<Pill><i class="fas fa-database"></i> MySQL</Pill>
+					<Pill><i class="fas fa-database"></i> PostgreSQL</Pill>
+					<Pill><i class="fas fa-database"></i> MongoDB</Pill> <!-- FontAwesome n'a pas d'icônes spécifiques pour PostgreSQL ou MongoDB, donc 'fas fa-database' est utilisé pour toutes les bases de données -->
+			
+				</div>
+				
 				</Hero>
 			</header>
 
-			<Skills />
 		</div>
 
 		<main class="wrapper stack gap-20 lg:gap-48">
@@ -97,8 +120,40 @@ const projects = (await getCollection('work'))
 	}
 
 	.roles {
-		display: none;
-	}
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.pill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 1em;
+    background: var(--color-pill-background, #6c757d); /* Fallback color if variable is not defined */
+    color: var(--color-pill-text, #ffffff); /* Fallback color if variable is not defined */
+    font-size: 0.85em; /* Adjust the font size as needed */
+    white-space: nowrap;
+}
+
+/* Adjusting the width of the Pill elements based on screen size */
+@media (min-width: 768px) {
+  .pill {
+      width: auto; /* Auto width for medium screens and up */
+  }
+}
+
+@media (min-width: 992px) {
+  .pill {
+      width: auto; /* Auto width for large screens and up */
+  }
+}
+
+
 
 	.hero img {
 		aspect-ratio: 5 / 4;
