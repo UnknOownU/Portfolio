@@ -41,11 +41,14 @@ const educationTimeline = [
     const timelineItems = document.querySelectorAll('.timeline-item');
 
     timelineItems.forEach((item, index) => {
-      // Appliquez un délai basé sur l'index pour créer un effet d'apparition séquentielle
-      item.style.animationDelay = `${index * 0.1}s`;
+      if (item instanceof HTMLElement) {
+        // Appliquez un délai basé sur l'index pour créer un effet d'apparition séquentielle
+        item.style.animationDelay = `${index * 0.1}s`;
+      }
     });
   });
 </script>
+
 
 
 <style>
