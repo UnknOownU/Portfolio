@@ -31,6 +31,6 @@ La fonctionnalité principale de CleanThis est la gestion et le suivi des opéra
 - Emploi de MongoDB pour une gestion avancée des logs, garantissant la traçabilité et la sécurité des données.
 - Intégration de l'API Lens pour la reconnaissance d'image, facilitant la soumission de demandes de nettoyage par les clients à l'aide de photographies.
 
-###  Innovation et Accessibilité
+#### Innovation et Accessibilité
 
 Ce projet transcende le cadre traditionnel d'une application de gestion de nettoyage. En intégrant des technologies de pointe et en optimisant l'expérience utilisateur, CleanThis se positionne comme une référence dans l'innovation logicielle du secteur des services.
