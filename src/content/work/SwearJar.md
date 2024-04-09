@@ -1,9 +1,10 @@
 ---
+
 title: SwearJar 
 publishDate: 2023-12-29
-img: /assets/stock-1.jpg
-img_alt: Iridescent ripples of a bright blue and pink liquid
-description: Mon premier grand projet
+img: https://firebasestorage.googleapis.com/v0/b/portfolio-abdelkarimboucharafa.appspot.com/o/SwearJar.png?alt=media&token=293f8f56-3d0c-449a-9ca7-db74f273ca5b
+img_alt: Logo SwearJar
+description: Une boîte à jurons réinventée
 tags:
   - Css
   - PHP

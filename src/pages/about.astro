@@ -2,23 +2,23 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
+import CallToAction from '../components/CallToAction.astro';
+import Grid from '../components/Grid.astro';
+import Icon from '../components/Icon.astro';
+import Pill from '../components/Pill.astro';
+import PortfolioPreview from '../components/PortfolioPreview.astro';
+
 
 const cvPdfUrl = 'https://firebasestorage.googleapis.com/v0/b/portfolio-abdelkarimboucharafa.appspot.com/o/dEV_fULL_sTACK.pdf?alt=media&token=e5346f0f-13d2-4000-8739-ab29a40fefe6';
 ---
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 <BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+				title="A Propos"
+				tagline="Découvrez mon parcours professionnel, mes compétences clés et mes objectifs."
 			>
-				<img
-					width="1553"
-					height="873"
-					src="/assets/at-work.jpg"
-					alt="Jeanine White at work with a colleague"
-				/>
 			</Hero>
 			<section>
 				<h2 class="section-title">CV</h2>
@@ -30,25 +30,10 @@ const cvPdfUrl = 'https://firebasestorage.googleapis.com/v0/b/portfolio-abdelkar
 				</div>
 			  </section>
 			<section>
-				<h2 class="section-title">Background</h2>
+				<h2 class="section-title">Introduction</h2>
 				<div class="content">
 					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
-					</p>
-					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
+						Je suis Abdel-Karim Boucharafa, 19 ans, développeur full-stack passionné par la technologie depuis mon enfance. J'ai acquis une solide expertise technique grâce à une formation rigoureuse et des expériences pratiques. Je m'intéresse également à l'économie et à l'entrepreneuriat, ce qui nourrit mon esprit analytique et renforce mes compétences en résolution de problèmes. Cette diversité d'intérêts a élargi ma perspective et affiné mon sens stratégique, me permettant de faire le lien entre la technologie et les affaires. Toujours avide d'apprendre et de relever de nouveaux défis, je suis déterminé à transformer mes ambitions en réalisations concrètes. Je suis prêt à mettre mon énergie et ma polyvalence au service d'un environnement professionnel stimulant.
 					</p>
 				</div>
 			</section>
@@ -60,8 +45,31 @@ const cvPdfUrl = 'https://firebasestorage.googleapis.com/v0/b/portfolio-abdelkar
 			</section>
 			<section>
 				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>officia unde omnis</p>
+				<div class="roles">
+					<!-- Création de site -->
+					<Pill><i class="fab fa-html5"></i> HTML</Pill>
+					<Pill><i class="fab fa-css3-alt"></i> CSS</Pill>
+					<Pill><i class="fab fa-js-square"></i> JavaScript</Pill>
+					<Pill><i class="fab fa-bootstrap"></i> Bootstrap</Pill>
+				
+					<!-- Création de fonctionnalités -->
+					<Pill><i class="fab fa-php"></i> PHP</Pill>
+					<Pill><i class="fab fa-symfony"></i> Symfony</Pill> <!-- Utilisez une icône personnalisée ou une image si FontAwesome n'a pas d'icône Symfony -->
+					<Pill><i class="fab fa-node-js"></i> Node.js</Pill>
+					<Pill><i class="fab fa-react"></i> React</Pill>
+					<!-- Implémentation, création et test d'API -->
+					<Pill><i class="fas fa-cloud"></i> <i class="fas fa-cog"></i> API REST</Pill> <!-- Cette icône n'existe pas dans FontAwesome, vous pourriez avoir besoin d'utiliser une icône générique pour REST, par exemple 'fas fa-cogs' -->
+					<Pill><i class="fab fa-git-alt"></i> Git</Pill>
+					<Pill><i class="fab fa-github"></i> GitHub</Pill> <!-- Utilisez 'fab fa-gitkraken' si vous voulez représenter GitKraken -->
+				
+					<!-- Containers et Orchestration -->
+					<Pill><i class="fab fa-docker"></i> Docker</Pill>
+				
+					<!-- Base de données -->
+					<Pill><i class="fas fa-database"></i> MySQL</Pill>
+					<Pill><i class="fas fa-database"></i> PostgreSQL</Pill>
+					<Pill><i class="fas fa-database"></i> MongoDB</Pill> <!-- FontAwesome n'a pas d'icônes spécifiques pour PostgreSQL ou MongoDB, donc 'fas fa-database' est utilisé pour toutes les bases de données -->
+			
 				</div>
 			</section>
 		</main>
@@ -95,6 +103,13 @@ const cvPdfUrl = 'https://firebasestorage.googleapis.com/v0/b/portfolio-abdelkar
 		font-size: var(--text-xl);
 		color: var(--gray-0);
 	}
+	.roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
 
 	.content {
 		grid-column: 2 / 4;
