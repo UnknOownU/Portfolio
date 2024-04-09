@@ -14,26 +14,58 @@ const projects = (await getCollection('work')).sort(
 ---
 
 <BaseLayout
-	title="Mes Projet | Boucharafa Abdelkarim"
-	description="ici vous retrouverez mes projet "
+    title="Mes Projets | Boucharafa Abdelkarim"
+    description="Ici vous retrouverez mes projets"
 >
-	<div class="stack gap-20">
-		<main class="wrapper stack gap-8">
-			<Hero
-				title="Mes Projet"
-				tagline="Ci-dessous Mes Projet Les plus récents"
-				align="start"
-			/>
-			<Grid variant="offset">
-				{
-					projects.map((project) => (
-						<li>
-							<PortfolioPreview project={project} />
-						</li>
-					))
-				}
-			</Grid>
-		</main>
-		<ContactCTA />
-	</div>
+    <div class="stack gap-20">
+        <main class="wrapper stack gap-8">
+            <Hero
+                title="Mes Projets"
+                tagline="Ci-dessous Mes Projets Les plus récents"
+                align="start"
+            />
+            <Grid variant="offset">
+                {
+                    projects.map((project) => (
+                        <li class="portfolio-preview-wrapper">
+                            <PortfolioPreview project={project} />
+                        </li>
+                    ))
+                }
+            </Grid>
+        </main>
+        <ContactCTA />
+    </div>
 </BaseLayout>
+<style>
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-content {
+    flex: 1;
+}
+
+.portfolio-preview-wrapper {
+    margin-bottom: 20px;
+    margin-right: 20px; /* Ajout d'une marge à droite */
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: wrap; /* Ajout de flex-wrap pour gérer les retours à la ligne */
+    }
+
+    .portfolio-preview-wrapper {
+        margin-right: 0; /* Supprimer la marge à droite */
+    }
+}
+
+.contact-cta {
+    width: 100%;
+}
+</style>
