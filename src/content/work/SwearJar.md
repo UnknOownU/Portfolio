@@ -25,7 +25,7 @@ Notre interface utilisateur est conçue pour faciliter le suivi et la gestion de
 ### Conception Centrée Utilisateur et Ludification
 
 SwearJar ne se limite pas à pénaliser ; il s'agit d'apprendre et de grandir. En intégrant des éléments de jeu, nous avons transformé une simple application web en une plateforme qui encourage un comportement positif grâce à un système de récompense. Les amendes collectées pourraient contribuer à un événement de groupe ou à une œuvre caritative, transformant une action négative en une action positive.
-#### Coulisses
+### Coulisses
 
 - Nous avons abordé le développement back-end PHP avec finesse.
 - JavaScript a donné vie à notre front-end avec un contenu dynamique.
