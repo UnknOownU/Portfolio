@@ -3,7 +3,7 @@ title: Série de TP - Développement Web
 description: Travaux Pratiques conçus pour développer des compétences essentielles en développement web, de la gestion de données au rendu dynamique.
 publishDate: 2019-12-01 00:00:00
 img: /assets/stock-2.jpg
-img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
+img_alt: Travaux Pratiques
 tags:
   - Introduction
   - MVC
