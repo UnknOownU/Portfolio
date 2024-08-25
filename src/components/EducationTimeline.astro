@@ -1,28 +1,27 @@
 ---
-
 const educationTimeline = [
   { 
-    institution: "AFPA, Formation Développeur full stack, Roubaix", 
+    institution: "AFPA, Formation Développeur Full Stack, Roubaix", 
     period: "2023 - 2024", 
-    details: "En recherche de stage pour la période du 06/05/2024 au 06/06/2024",
-    diploma: "Licence De Développeur full stack en cours." 
+    details: "Stage réalisé chez Livz.app du 06/05/2024 au 06/06/2024.",
+    diploma: "Bac +2 Développeur Full Stack obtenu." 
   },
   { 
     institution: "Lycée Colbert, Tourcoing", 
     period: "2019 - 2023",
-    diploma: "Bac général et technologique obtenu" 
+    diploma: "Bac Général et Technologique obtenu, Spécialité S.I.N STI2D" 
   },
   { 
-    institution: "Collège SAINT GABRIEL, Tourcoing", 
+    institution: "Collège Saint Gabriel, Tourcoing", 
     period: "2016 - 2019",
-    diploma: "Brevet obtenu Avec Mention" 
+    diploma: "Brevet obtenu avec Mention" 
   }
 ];
 ---
 
 <div class="education-timeline">
-  {educationTimeline.map((education, index) => (
-    <div class="timeline-item" >
+  {educationTimeline.map((education) => (
+    <div class="timeline-item">
       <div class="timeline-marker"></div>
       <div class="timeline-content">
         <h4>{education.institution}</h4>
@@ -40,7 +39,6 @@ const educationTimeline = [
 
     timelineItems.forEach((item, index) => {
       if (item instanceof HTMLElement) {
-        // Appliquez un délai basé sur l'index pour créer un effet d'apparition séquentielle
         item.style.animationDelay = `${index * 0.1}s`;
       }
     });
@@ -49,74 +47,68 @@ const educationTimeline = [
 
 
 
+
 <style>
   /* Variables CSS pour thèmes clair et sombre */
   :root {
-    --background-content: #fff; /* Fond blanc pour le contenu */
-    --text-color: #333; /* Texte noir pour le contenu */
-    --background-timeline: #eee; /* Fond gris clair pour les éléments de la timeline */
-    --box-shadow-color: rgba(0, 0, 0, 0.1); /* Ombre légère pour le thème clair */
-  }
+  --background-content: #fff;
+  --text-color: #333;
+  --background-timeline: #eee;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+}
 
-  /* Variables CSS pour le thème sombre */
-  .theme-dark {
-    --background-content: #333; /* Fond noir pour le contenu */
-    --text-color: #ccc; /* Texte gris clair pour le contenu */
-    --background-timeline: #444; /* Fond gris foncé pour les éléments de la timeline */
-    --box-shadow-color: rgba(255, 255, 255, 0.1); /* Ombre blanche pour le thème sombre */
-  }
+.theme-dark {
+  --background-content: #333;
+  --text-color: #ccc;
+  --background-timeline: #444;
+  --box-shadow-color: rgba(255, 255, 255, 0.1);
+}
 
-  /* Styles de base pour le contenu de la timeline */
-  .education-timeline {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Alignement des enfants à gauche */
-    gap: 20px; /* Espacement entre les éléments */
-    max-width: 800px;
-    margin: 20px auto;
-  }
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+}
 
-  /* Styles pour chaque élément de la timeline */
-  .timeline-item {
-    width: 100%; /* Tous les éléments prennent la pleine largeur */
-  }
+.timeline-item {
+  width: 100%;
+}
 
-  /* Styles pour le contenu de chaque élément de la timeline */
-  .timeline-content {
-    background: var(--background-timeline);
-    color: var(--text-color);
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 5px var(--box-shadow-color);
-    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-  }
+.timeline-content {
+  background: var(--background-timeline);
+  color: var(--text-color);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px var(--box-shadow-color);
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
 
-  /* Animation pour faire apparaître les éléments de la timeline */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  /* Application de l'animation fadeInUp aux éléments de la timeline */
-  .timeline-item {
-    opacity: 0; /* État initial de l'opacité pour l'animation */
-    animation: fadeInUp 0.5s ease-in-out forwards;
-  }
+.timeline-item {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-in-out forwards;
+}
 
-  /* État hover pour les éléments de la timeline */
-  .timeline-item:hover .timeline-content {
-    box-shadow: 0 4px 8px var(--box-shadow-color-hover);
-  }
+.timeline-item:hover .timeline-content {
+  box-shadow: 0 4px 8px var(--box-shadow-color-hover);
+}
 
-  /* Assurez-vous que le reste du contenu change également en fonction du thème */
-  body, h4, p, time {
-    color: var(--text-color);
-  }
+body, h4, p, time {
+  color: var(--text-color);
+}
+
 </style>
 
